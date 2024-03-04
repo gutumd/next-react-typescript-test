@@ -1,0 +1,109 @@
+.book-list-card {
+  width: 100%;
+  min-height: 400px;
+  background-color: #775a3b;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  margin-bottom: 30px;
+  margin-right: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 10px 20px;
+  position: relative;
+
+  @media screen and (max-width: 600px) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 48%;
+  }
+
+  @media (min-width: 600px) and (max-width: 992px) {
+    margin-right: 3%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 31%;
+  }
+
+  @media (min-width: 992px) and (max-width: 1260px) {
+    margin-right: 3%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 1260px) {
+    width: 23%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .title,
+  .subtitle,
+  .search-info {
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .search-info {
+    font-size: 16px;
+  }
+
+  button {
+    background: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    img {
+      background: transparent;
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      margin: 0;
+    }
+  }
+}
